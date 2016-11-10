@@ -15,7 +15,7 @@ module.exports = {
   |
   */
   connection: Env.get('DB_CONNECTION', 'sqlite'),
-
+  // PG --> PostgreSQL
   /*
   |--------------------------------------------------------------------------
   | Sqlite
@@ -65,14 +65,19 @@ module.exports = {
   | npm i --save pg
   |
   */
-  pg: {
-    client: 'pg',
-    connection: {
-      host: Env.get('DB_HOST', 'localhost'),
-      user: Env.get('DB_USER', 'root'),
-      password: Env.get('DB_PASSWORD', ''),
-      database: Env.get('DB_DATABASE', 'adonis')
+//   pg: {
+//     client: 'pg',
+//     connection: {
+//       host: Env.get('DB_HOST', 'localhost'),
+//       user: Env.get('DB_USER', 'root'),
+//       password: Env.get('DB_PASSWORD', ''),
+//       database: Env.get('DB_DATABASE', 'adonis')
+//     }
+//   }
+    // shorter version of what's above -->
+    pg: {
+        client: 'pg',
+        connection: Env.get('DATABASE_URL')
     }
-  }
-
+//
 }
