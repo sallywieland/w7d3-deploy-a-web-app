@@ -20,4 +20,6 @@ const Route = use('Route')
 Route.resource('/blog', 'BlogController')
 // anything that comes in on /blog (route), it will be passed onto BlogController (controller)
 
+Route.resource('/chats', 'ChatsController')
+// Route.post('/chats', 'ChatsController.index')
 Route.on('/').render('welcome')
