@@ -21,5 +21,5 @@ Route.resource('/blog', 'BlogController')
 // anything that comes in on /blog (route), it will be passed onto BlogController (controller)
 
 Route.resource('/chats', 'ChatsController')
-// Route.post('/chats', 'ChatsController.index')
+// anything that comes in on /chats (route), will be passed onto the ChatsController (controller)
 Route.on('/').render('welcome')

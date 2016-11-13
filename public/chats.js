@@ -1,4 +1,4 @@
-var userChat = document.getElementById('message')
+var userChat = document.getElementById('message') // grabs element from chats.njk file (able to do that through masterChats.njk file?)
 
 // Pusher Setup
 var pusher = new Pusher('6e5f67bde794d28881ed', {
@@ -19,7 +19,7 @@ function pressEnter(event) {
 }
 
 function updateMessages() {
-  fetch('/chats', {
+  fetch('/chats', { // just need /chats as endpoint because of the localhost
     body: JSON.stringify({
       message: userChat.value // grabbing the value that's entered into the text input box.
     }),
